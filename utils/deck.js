@@ -17,7 +17,9 @@ export function shuffle(deck) {
         repeat += 1
     }
     return deck
-}   
+}
+
+
 function createCard(rank, suite) {
     let value = 0;
 
@@ -25,23 +27,23 @@ function createCard(rank, suite) {
 
         switch (rank) {
             case "J":
-            value = 11;
-            break;
+                value = 11;
+                break;
 
-        case "Q":
-            value = 12;
-            break;
+            case "Q":
+                value = 12;
+                break;
 
-        case "K":
-            value = 13;
-            break;
+            case "K":
+                value = 13;
+                break;
 
-        case "A":
-            value = 14;
-            break;
+            case "A":
+                value = 14;
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     } else {
         value = Number(rank);
@@ -55,7 +57,7 @@ function createCard(rank, suite) {
 }
 
 
-function compareCard(p1Card, p2Card) {
+export function compareCard(p1Card, p2Card) {
     const p1Value = p1Card.value;
     const p2Value = p2Card.value;
 
@@ -73,11 +75,11 @@ function compareCard(p1Card, p2Card) {
 }
 
 
-function createDeck() {
+export function createDeck() {
     const ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
     const suits = ['H', 'C', 'D', 'S'];
     const cards = []
-    
+
     ranks.forEach((rank) => {
         suits.forEach((suite) => {
             const card = createCard(rank, suite);
@@ -88,4 +90,4 @@ function createDeck() {
     return cards
 }
 
-console.log(createDeck().slice(0, 4));
+
