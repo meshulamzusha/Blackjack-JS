@@ -24,7 +24,8 @@ function createCard(rank, suite) {
     if (isNaN(rank)) {
 
         switch (rank) {
-            case "J":
+            
+        case "J":
             value = 11;
             break;
 
